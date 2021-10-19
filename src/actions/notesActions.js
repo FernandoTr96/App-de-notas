@@ -123,12 +123,14 @@ export const updateNote = (note) => {
     return async (dispatch, getState) => {
 
         const { auth: { uid } } = getState();
+
         const noteToFireStore = { ...note };
         delete noteToFireStore.id;
 
         try {
 
             const docRef = doc(db, `${uid}/journal/notes`, note.id);
+
             await updateDoc(docRef, noteToFireStore);
             dispatch(activeNote(note.id, note));
             dispatch(refreshNote(note.id, note));

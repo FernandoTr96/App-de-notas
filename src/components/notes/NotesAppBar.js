@@ -21,9 +21,7 @@ export const NotesAppBar = ({noteListener}) => {
                 {
                     id:active.id,
                     ...noteListener,
-                    date: active.date,
-                    public_id: active.public_id,
-                    url: active.url
+                    date: active.date
                 }
             )
         );
