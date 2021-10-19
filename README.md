@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# JournalApp
+Aplicacion de notas utilizando React , sass y firebase.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
