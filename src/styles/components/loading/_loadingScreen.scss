@@ -1,0 +1,30 @@
+.loading__loadingScreen{
+
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $primary;
+    mix-blend-mode: darken;
+
+    & .loading__gif{
+       width: 10rem;
+       height: 10rem;
+       border-radius: 50%;
+    }
+
+    & p{
+       font-weight: bold;
+       font-size: 1.5rem;
+       font-family: cursive;
+       margin: 1rem;
+       text-shadow: 3px 3px 5px rgb(26, 26, 26);
+       color: $light;
+       text-align: justify;
+    }
+}

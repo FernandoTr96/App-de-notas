@@ -1,0 +1,30 @@
+%buttonBlock{
+    border: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px 0px $shadow;
+    cursor: pointer;
+    display: block;
+    padding: .5rem;
+    margin: .5rem 0rem;
+    color: $light;
+    background-color: $primary;
+}
+
+%buttonSocialNetwork{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background-color: $light;
+    color: $primary;
+    font-size: .8rem;
+    box-shadow: 0px 0px 2px 0px $shadow;
+    cursor: pointer;
+}
+
+%buttonIcon{
+    background-color: transparent;
+    color: $light;
+    border:none;
+    cursor: pointer;
+}

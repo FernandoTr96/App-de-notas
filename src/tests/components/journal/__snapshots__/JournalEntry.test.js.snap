@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <JournalEntry/> debe renderizar correctamente 1`] = `
+<div
+  className="journal__entry animate__animated animate__bounceInDown"
+  onClick={[Function]}
+>
+  <div
+    className="journal__picture"
+    style={
+      Object {
+        "backgroundImage": "url(https://placimg.com/200/200/any)",
+      }
+    }
+  />
+  <div
+    className="journal__body"
+  >
+    <div
+      className="journal__title"
+    >
+      <h4>
+        tiutlo
+      </h4>
+    </div>
+    <div
+      className="journal__desc"
+    >
+      <small>
+        body
+      </small>
+    </div>
+  </div>
+  <div
+    className="journal__date"
+  >
+    <small>
+      17/10/2021
+    </small>
+  </div>
+</div>
+`;

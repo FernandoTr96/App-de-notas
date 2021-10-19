@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Sidebar/> debe renderizar correctamente 1`] = `
+Array [
+  <input
+    id="btnMenu"
+    type="checkbox"
+  />,
+  <label
+    className="journal__btn-menu"
+    htmlFor="btnMenu"
+  >
+    <span
+      className="line-1"
+    />
+    <span
+      className="line-2"
+    />
+    <span
+      className="line-3"
+    />
+  </label>,
+  <aside
+    className="journal__aside animate__animated animate__fadeIn"
+  >
+    <div
+      className="journal__user"
+    >
+      <div
+        className="journal__displayName"
+      >
+        <img
+          alt="photoURL"
+          className="journal__photo"
+          src="https://placeimg.com/100/100/any"
+        />
+        <small>
+          Fernando
+        </small>
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-power-off"
+        />
+         Logout
+      </button>
+    </div>
+    <div
+      className="journal__btn-add-entry"
+      title="add entry"
+    >
+      <button
+        onClick={[Function]}
+      >
+        <i
+          className="far fa-calendar-plus"
+        />
+        <small>
+          Create entry
+        </small>
+      </button>
+    </div>
+    <div
+      className="journal__entries"
+    />
+  </aside>,
+]
+`;

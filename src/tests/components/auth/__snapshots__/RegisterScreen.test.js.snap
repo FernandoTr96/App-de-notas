@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <RegisterScreen/> debe pintarse correctamente 1`] = `
+<form
+  autoComplete="off"
+  className="auth__form animate__animated animate__fadeIn"
+  onSubmit={[Function]}
+>
+  <legend>
+    Register
+  </legend>
+  <input
+    name="email"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="📧 example@gmail.com"
+    type="email"
+  />
+  <input
+    name="userName"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="👤 your user name"
+    type="text"
+  />
+  <input
+    name="password"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="🔑 Password"
+    type="password"
+  />
+  <input
+    name="confirmPwd"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="🔑 Confirm password"
+    type="password"
+  />
+  <button
+    disabled={false}
+    type="submit"
+  >
+    Create account
+  </button>
+  <a
+    className="auth__link"
+    href="/auth/login"
+    onClick={[Function]}
+  >
+    I have a account
+  </a>
+</form>
+`;

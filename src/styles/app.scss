@@ -1,0 +1,15 @@
+/*
+    -La carpeta styles contendra todos los estilos
+    -Para usar sass con react hay que instalarlo: npm i node-sass
+*/
+
+//estilos base
+@import './base/variables';
+@import './base/base';
+
+//components
+@import './components/auth/auth';
+@import './components/journal/journal';
+@import './components/nothing/nothing';
+@import './components/notes/NoteScreen.scss';
+@import './components//loading/loadingScreen';

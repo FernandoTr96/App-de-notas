@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <NoteScreen/> debe pintarse correctamente 1`] = `
+<div
+  className="notes__main-content"
+>
+  <div
+    className="notes__appbar"
+  >
+    <span>
+      <i
+        className="fas fa-calendar-day"
+      />
+       
+      16 de octubre de 2021
+       
+    </span>
+    <div>
+      <input
+        accept="*/img"
+        className="none"
+        id="file"
+        onChange={[Function]}
+        type="file"
+      />
+      <button
+        className="btn-picture"
+      >
+        <label
+          htmlFor="file"
+        >
+          <i
+            className="far fa-images"
+          />
+           picture
+        </label>
+      </button>
+      <button
+        className="btn-save"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-save"
+        />
+         save
+      </button>
+      <button
+        className="btn-delete"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-trash-alt"
+        />
+         delete
+      </button>
+    </div>
+  </div>
+  <div
+    className="notes__content"
+  >
+    <input
+      autoComplete="off"
+      defaultValue="TITLERANDOM"
+      name="title"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder="Title"
+      type="text"
+    />
+    <textarea
+      defaultValue="BODYRANDOM"
+      name="body"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder="What happened today ?"
+    />
+  </div>
+</div>
+`;

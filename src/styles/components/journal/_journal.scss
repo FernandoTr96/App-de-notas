@@ -1,0 +1,274 @@
+@import '../../_classes/buttons.scss';
+
+.journal__root{
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: auto;
+
+    @include oldMobile{
+        grid-template-columns: 1fr;
+    }
+    @include mobile{
+        grid-template-columns: 1fr;
+    }
+    @include tablet{
+        grid-template-columns: 1fr;
+    }
+    @include desktop{
+        grid-template-columns: 25% 1fr;
+    }
+    @include large{
+        grid-template-columns: 25% 1fr;
+    }
+
+    .journal__aside{
+        height: 100vh;
+        background-color: $primary;
+        color: $light;
+        overflow: hidden;
+        transition: transform 500ms;
+        transform: translateX(-100%);
+        @include oldMobile{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+        }
+        @include mobile{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+        }
+        @include tablet{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+        }
+        @include desktop{
+            position: static;
+            transform: translateX(0);
+        }
+        @include large{
+            position: static;
+            transform: translateX(0);
+        }
+
+        .journal__user{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .7rem 1rem;
+            font-size: medium;
+
+            .journal__displayName{
+                display: flex;
+                align-items: center;
+
+                .journal__photo{
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    border: 1px solid $dark;
+                    margin-right: .5rem;
+                }
+            }
+
+            small{
+                font-weight: 500;
+                font-family: cursive;
+            }
+
+            button{
+                
+                @extend %buttonIcon;
+                padding: .3rem;
+                margin-right: .5rem;
+                border-radius: .5em;
+
+                &:hover{
+                    transition: background 200ms;
+                    background-color: rgba(0, 0, 0, 0.158);
+                }
+            }
+        }
+        .journal__btn-add-entry{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem;
+
+            & button {
+                border: none;
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .fa-calendar-plus{
+                    font-size: 3rem;
+                    margin-bottom: .5rem;
+                    color: darken($primary,30);
+                    opacity: .5;
+                    cursor: pointer;
+    
+                    &:hover{
+                        transition: opacity 200ms;
+                        opacity: 1;
+                    }
+                }
+
+                .fa-calendar-plus + small{
+                    font-weight: 600;
+                    font-size: small;
+                    color: $secondary;
+                }
+            }
+        }
+
+        .journal__entries{  
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            overflow-y: scroll;
+            margin-top: 1rem;
+
+            &::-webkit-scrollbar {
+                width: 8px;     /* Tamaño del scroll en vertical */
+                height: 8px;    /* Tamaño del scroll en horizontal */
+                display: block;
+            }            
+
+            .journal__entry{
+                width: 90%;
+                background-color: rgba(48, 48, 48, 0.521);
+                margin-bottom: .5rem;
+                padding: .5rem;
+                display: flex;
+                justify-content: space-around;
+                border-radius: .3rem;
+                cursor: pointer;
+
+                &:hover{
+                    transition: backGround 500ms;
+                    background-color: rgba(48, 48, 48, 0.733);
+                }
+
+                .journal__picture{
+                    width: 15%;
+                    height: auto;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                .journal__body{
+                    width: 60%;
+                    padding: .5rem;
+                    font-size: .9rem;
+
+                    .journal__title{
+                        color: darken($light, 20);
+                        text-transform: capitalize;
+                    }
+                }
+
+                .journal__desc{
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .journal__date{
+                    width: auto;
+                    padding: .5rem;
+                    font-size: smaller;
+                    display: flex;
+                    align-items: center;
+                    color: darken($light, 20);
+                }
+            }
+        }
+    }
+
+    .journal__btn-menu{
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        bottom: calc(1rem);
+        right: calc(1rem);
+        z-index: 1000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: darken($primary,7);
+        border: 1px solid $shadow;
+        cursor: pointer;
+
+        @include oldMobile{
+            display: flex;
+        }
+        @include mobile{
+            display: flex;
+        }
+        @include tablet{
+            display: flex;
+        }
+        @include desktop{
+            display: none;
+        }
+        @include large{
+            display: none;
+        }
+
+        & span{
+            height: 2.5px;
+            width: 60%;
+            background-color: $light;
+            padding: 1px;
+            margin: 3.5px;
+            transition: transform 500ms;
+        }
+    }
+
+    //checkbox menu
+    #btnMenu{
+        display: none;
+    }
+    #btnMenu:checked ~ .journal__aside{
+        transform: translateX(0);
+    }
+    #btnMenu:checked ~ .journal__btn-menu > .line-3{
+        width: 100%;
+        transition: opacity 500ms;
+        transition: transform 500ms;
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    #btnMenu:checked ~ .journal__btn-menu > .line-2{
+        width: 80%;
+        transition: transform 500ms;
+        transform: rotate(45deg);
+        /*left center right top bottom*/
+        transform-origin: 50% 50%;
+    }
+    #btnMenu:checked ~ .journal__btn-menu > .line-1{
+        width: 80%;
+        transition: transform 500ms;
+        transform: rotate(-45deg);
+        transform-origin: 75% 200%;
+    }
+}

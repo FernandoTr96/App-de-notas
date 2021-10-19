@@ -1,0 +1,26 @@
+@import '../../_classes/main_content.scss';
+
+.nothing__main-content{
+
+    @extend %main-content;
+    background-color: $secondary;
+    color: $light;
+    justify-content: center;
+    align-items: center;
+    
+    p{
+        text-align: center;
+        font-weight: bold;
+        font-family: cursive;
+        opacity: .7;
+        font-size: .9rem;
+        letter-spacing: 2px;
+        color: $primary;
+
+        .fa-star{
+            margin-top: 1rem;
+            font-size: 2rem;
+            color: $primary;
+        }
+    }
+}

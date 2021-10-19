@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <LoginScreen/> debe renderizarse correctamente 1`] = `
+<form
+  autoComplete="off"
+  className="auth__form animate__animated animate__fadeIn"
+  onSubmit={[Function]}
+>
+  <legend>
+    JournalApp
+  </legend>
+  <input
+    name="email"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="📧 example@gmail.com"
+    type="text"
+  />
+  <input
+    name="password"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="🔑 password"
+    type="password"
+  />
+  <button
+    disabled={false}
+    type="submit"
+  >
+    Log-in
+  </button>
+  <div
+    className="auth__google-sign-in"
+    onClick={[Function]}
+  >
+    <p
+      className="auth__google-legend"
+    >
+      Login with social network
+    </p>
+    <div
+      className="auth__google-button"
+    >
+      <div>
+        <img
+          alt="google"
+          src="https://freesvg.org/img/1534129544.png"
+        />
+      </div>
+      <p>
+        <b>
+          Sign in with google
+        </b>
+      </p>
+    </div>
+  </div>
+  <a
+    className="auth__link"
+    href="/auth/register"
+    onClick={[Function]}
+  >
+    Create new account
+  </a>
+</form>
+`;

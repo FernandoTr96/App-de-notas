@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::after,*::before{
+    box-sizing: inherit;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    font-size: $fs-page;
+    background-color: $bgc-page;
+    font-family: $ff-page;
+    color: $text-color-page;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.error{
+    color: indianred;
+    margin-bottom: .5rem;
+}
+
+.none{
+    display: none;
+}
+
+
+.loader{
+    margin-right: .5rem;
+}
