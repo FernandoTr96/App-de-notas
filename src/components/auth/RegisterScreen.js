@@ -40,34 +40,34 @@ export const RegisterScreen = () => {
                 defaultValue={watch('email')}
                 { ...register( 'email' , {required:true, pattern: /^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$/i} ) }
             />
-            {errors.email?.type==='required' && <small className='error'>*Este campo es requerido</small>}
-            {errors.email?.type==='pattern' && <small className='error'>*La estructura del correo no es valida</small>}
+            {errors.email?.type==='required' && <small className='error'>*This field is required</small>}
+            {errors.email?.type==='pattern' && <small className='error'>*The email does not have a valid structure</small>}
 
             <input
                 type='text'
-                placeholder='👤 your user name'
+                placeholder='👤 username'
                 defaultValue={watch('userName')}
                 { ...register( 'userName' , {required:true} ) }
             />
-            {errors.userName?.type==='required' && <small className='error'>*Este campo es requerido</small>}
+            {errors.userName?.type==='required' && <small className='error'>*This field is required</small>}
 
             <input
                 type='password'
-                placeholder='🔑 Password'
+                placeholder='🔑 password'
                 defaultValue={watch('password')}
                 { ...register( 'password' , {required:true, pattern: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/i} ) }
             />
-            {errors.password?.type==='required' && <small className='error'>*Este campo es requerido</small>}
-            {errors.password?.type==='pattern' && <small className='error'>*La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula</small>}
+            {errors.password?.type==='required' && <small className='error'>*This field is required</small>}
+            {errors.password?.type==='pattern' && <small className='error'>*The password must have at least 8 to 16 characters, at least one digit, at least one lowercase and at least one uppercase</small>}
 
             <input
                 type='password'
-                placeholder='🔑 Confirm password'
+                placeholder='🔑 confirm password'
                 defaultValue={watch('confirmPwd')}
                 { ...register( 'confirmPwd' , {required:true} ) }
             />
-            {errors.confirmPwd?.type==='required' && <small className='error'>*Este campo es requerido</small>}
-            {watch('password') !== watch('confirmPwd') && <small className='error'>*Las contraseñas no coinciden</small>}
+            {errors.confirmPwd?.type==='required' && <small className='error'>*This field is required</small>}
+            {watch('password') !== watch('confirmPwd') && <small className='error'>*Passwords do not match</small>}
             
             <button type='submit' disabled={loading}>
             {loading && <Loader src = 'https://samherbert.net/svg-loaders/svg-loaders/tail-spin.svg' /> } 

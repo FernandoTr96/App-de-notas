@@ -54,8 +54,8 @@ export const LoginScreen = () => {
                 defaultValue={watch('email')}
                 {...register('email', { required: true, pattern: /^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$/i })}
             />
-            {errors.email?.type === 'required' && <small className='error'>*Este campo es requerido</small>}
-            {errors.email?.type === 'pattern' && <small className='error'>*La estructura del correo no es valida</small>}
+            {errors.email?.type === 'required' && <small className='error'>*This field is required</small>}
+            {errors.email?.type === 'pattern' && <small className='error'>*The email does not have a valid structure</small>}
 
             <input
                 type='password'
@@ -63,7 +63,7 @@ export const LoginScreen = () => {
                 defaultValue={watch('password')}
                 {...register('password', { required: true })}
             />
-            {errors.password && <small className='error'>*Este campo es requerido</small>}
+            {errors.password && <small className='error'>*This field is required</small>}
 
             <button type='submit' disabled={loading} >
                 {loading && <Loader src='https://samherbert.net/svg-loaders/svg-loaders/tail-spin.svg' />}

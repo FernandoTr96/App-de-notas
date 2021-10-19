@@ -5,7 +5,9 @@
 .auth__main{
     @extend %main-content;
     overflow-x: hidden;
-    background-color: $light;
+    background-image: url('https://cdn.pixabay.com/photo/2013/10/07/18/06/field-192179_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: center;
     align-items: center;
 }
