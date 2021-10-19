@@ -46,7 +46,14 @@
                 background-color: rgb(187, 70, 70)
             }
         }
-    
+
+        @include oldMobile{
+            padding: .5rem 1rem;
+        }
+        @include mobile{
+            padding: .8rem 3rem;
+        }
+
     }
 
     .notes__content{
