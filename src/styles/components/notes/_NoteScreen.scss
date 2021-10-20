@@ -13,6 +13,12 @@
         display: flex;
         justify-content: space-between;
         padding: .8rem 3rem;
+
+        @include oldMobile{
+            flex-wrap: wrap;
+            padding: .8rem 1rem;
+            gap: 1rem;
+        }
     
         span{
             font-size: .7rem;
@@ -45,13 +51,6 @@
                 transition: background 200ms;
                 background-color: rgb(187, 70, 70)
             }
-        }
-
-        @include oldMobile{
-            padding: .5rem 1rem;
-        }
-        @include mobile{
-            padding: .8rem 3rem;
         }
 
     }
