@@ -1,5 +1,5 @@
 # JournalApp
-Aplicacion de notas utilizando React , sass y firebase.
+Aplicacion de notas utilizando React , Redux, sass y firebase.
 
 ## Getting Started with Create React App
 
